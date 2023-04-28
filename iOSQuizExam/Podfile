@@ -6,9 +6,8 @@ target 'iOSQuizExam' do
   use_frameworks!
 
   # Pods for iOSQuizExam
-    pod ‘FBSDKCoreKit’
-    pod ‘FBSDKLoginKit’
-    pod ‘FBSDKShareKit’
-    pod 'FBSDKLoginKit'
-
+  pod ‘FBSDKCoreKit’
+  pod ‘FBSDKLoginKit’
+  pod ‘FBSDKShareKit’
+  
 end
