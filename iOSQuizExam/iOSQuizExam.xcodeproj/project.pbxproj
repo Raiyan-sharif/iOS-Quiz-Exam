@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BB91BED2A04220E004A14BE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB91BEC2A04220E004A14BE /* Question.swift */; };
+		1BB91BEF2A0422B2004A14BE /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB91BEE2A0422B2004A14BE /* QuestionBank.swift */; };
 		1E86419E832E12E8D5FF1C53 /* Pods_iOSQuizExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7CF5147875622029A8E90A /* Pods_iOSQuizExam.framework */; };
 		89FF916129FA424500D2CF99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FF916029FA424500D2CF99 /* AppDelegate.swift */; };
 		89FF916329FA424500D2CF99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FF916229FA424500D2CF99 /* SceneDelegate.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		0AACB362F860985A107EF7E4 /* Pods-iOSQuizExam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSQuizExam.debug.xcconfig"; path = "Target Support Files/Pods-iOSQuizExam/Pods-iOSQuizExam.debug.xcconfig"; sourceTree = "<group>"; };
+		1BB91BEC2A04220E004A14BE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1BB91BEE2A0422B2004A14BE /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		813616C68C652DC881974C70 /* Pods-iOSQuizExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSQuizExam.release.xcconfig"; path = "Target Support Files/Pods-iOSQuizExam/Pods-iOSQuizExam.release.xcconfig"; sourceTree = "<group>"; };
 		89FF915D29FA424500D2CF99 /* iOSQuizExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSQuizExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FF916029FA424500D2CF99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +46,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BB91BE92A041769004A14BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1BB91BEC2A04220E004A14BE /* Question.swift */,
+				1BB91BEE2A0422B2004A14BE /* QuestionBank.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1BB91BEA2A041780004A14BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89FF916B29FA424600D2CF99 /* LaunchScreen.storyboard */,
+				89FF916629FA424500D2CF99 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1BB91BEB2A04179C004A14BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89FF916429FA424500D2CF99 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		61FEC1CA2D7034ED5241F264 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,12 +110,12 @@
 		89FF915F29FA424500D2CF99 /* iOSQuizExam */ = {
 			isa = PBXGroup;
 			children = (
+				1BB91BEB2A04179C004A14BE /* Controller */,
+				1BB91BEA2A041780004A14BE /* View */,
+				1BB91BE92A041769004A14BE /* Model */,
 				89FF916029FA424500D2CF99 /* AppDelegate.swift */,
 				89FF916229FA424500D2CF99 /* SceneDelegate.swift */,
-				89FF916429FA424500D2CF99 /* ViewController.swift */,
-				89FF916629FA424500D2CF99 /* Main.storyboard */,
 				89FF916929FA424600D2CF99 /* Assets.xcassets */,
-				89FF916B29FA424600D2CF99 /* LaunchScreen.storyboard */,
 				89FF916E29FA424600D2CF99 /* Info.plist */,
 			);
 			path = iOSQuizExam;
@@ -207,7 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				89FF916529FA424500D2CF99 /* ViewController.swift in Sources */,
+				1BB91BED2A04220E004A14BE /* Question.swift in Sources */,
 				89FF916129FA424500D2CF99 /* AppDelegate.swift in Sources */,
+				1BB91BEF2A0422B2004A14BE /* QuestionBank.swift in Sources */,
 				89FF916329FA424500D2CF99 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,10 +392,13 @@
 				DEVELOPMENT_TEAM = 2BL4KQW6R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSQuizExam/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "iOS Quiz";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -395,10 +430,13 @@
 				DEVELOPMENT_TEAM = 2BL4KQW6R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSQuizExam/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "iOS Quiz";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
 				LD_RUNPATH_SEARCH_PATHS = (
